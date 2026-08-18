@@ -14,3 +14,18 @@ CALDAV_USER = "ryder"
 # ntfy topic for a one-ping-per-summary notification when tasks are created
 # (or when a summary fails to parse). Unset to disable notifications.
 NTFY_URL = "https://ntfy.sh/bogdan-email-notifs"
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
