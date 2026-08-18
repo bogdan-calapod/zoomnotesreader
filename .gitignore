@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+.dev.vars
+
+# Local smoke-test script — contains a live Nextcloud app password.
+test.sh

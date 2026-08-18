@@ -1,0 +1,16 @@
+name = "zoom-actions-worker"
+main = "src/index.js"
+compatibility_date = "2026-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Non-secret config lives here. Secrets (CALDAV_APP_PASSWORD) are set with:
+#   npx wrangler secret put CALDAV_APP_PASSWORD
+[vars]
+OWNER_NAME = "Bogdan Calapod"
+# Full CalDAV collection URL for your "To organize" list, WITH trailing slash:
+#   https://<your-nextcloud-host>/remote.php/dav/calendars/<user>/<list-id>/
+CALDAV_URL = "https://nextcloud.noahbox.org/remote.php/dav/calendars/ryder/2835368016245899434/"
+CALDAV_USER = "ryder"
+# ntfy topic for a one-ping-per-summary notification when tasks are created
+# (or when a summary fails to parse). Unset to disable notifications.
+NTFY_URL = "https://ntfy.sh/bogdan-email-notifs"
